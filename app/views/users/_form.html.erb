@@ -1,0 +1,32 @@
+<%= form_for user do |f| %>
+
+  <% if user.errors.any? %>
+    <ul>
+      <% user.errors.full_messages.each do |m| %>
+        <li><%= m %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<div class="field">
+  <p><%= f.label :email %></p>
+  <p><%= f.text_field  :email %></p>
+
+</div>
+
+<div class="field">
+  <p><%= f.label :password %></p>
+  <p><%= f.password_field :password %></p>
+</div>
+
+<div class="field">
+  <p><%= f.label :password_confirmation %></p>
+  <p><%= f.password_field :password_confirmation %></p>
+</div>
+
+<div class="field">
+  <p><%= f.submit "Add Me!" %></p>
+
+</div>
+
+<% end %>

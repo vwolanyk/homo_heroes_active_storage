@@ -1,0 +1,24 @@
+<h1>BIG HOMOS</h1>
+
+<%= link_to "ADD A QUEERO", queer_icons_new_path %>
+<% @icons.each do |icon| %>
+  <% if icon.name != "Beth Ditto" %>
+<div class="polaroid">
+
+  <p><%= icon.name %></p>
+  <%= link_to(image_tag(icon.img_url), "/queer_icons/#{icon.id}") %>
+
+
+</div>
+  <% end %>
+  <%end%>
+
+<div class= "ditto">
+  <% @icons.where('name = ?', 'Beth Ditto').each do |icon| %>
+  <div class="polaroid ditto">
+
+    <p><%= icon.name%></p>
+    <%= link_to(image_tag(icon.img_url), "/queer_icons/#{icon.id}") %>
+
+  </div>
+  <% end %>

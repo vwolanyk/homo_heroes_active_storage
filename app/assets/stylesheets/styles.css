@@ -1,0 +1,80 @@
+/* BASE styles */
+
+html {
+        box-sizing: border-box;
+        font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        color: #333333;
+        text-align: center;
+}
+
+*,
+*::before,
+*::after  {
+            box-sizing: inherit;
+          }
+
+body  { margin: auto;
+        max-width: 1200px;
+      }
+
+/*
+  This rule ensure that all images always fit in their container
+   but are never stretched beyond their native resolution
+*/
+img {
+  max-width: 100%;
+}
+
+
+/* CLEARFIX - for ensuring floated elements are contained in their parent */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Standard LAYOUT EACH PAGE has this*/
+/*****************************************/
+
+main {max-width: 95%;
+      margin: auto;}
+
+
+
+
+
+.polaroid {
+  position:relative;
+ float:left;
+ margin: 5%;
+  width: 220px;
+}
+
+.polaroid img {
+  width: 200px;
+  height: 300px;
+  overflow:hidden;
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
+}
+
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+.ditto { background-color: purple;}
+
+#error_explanation {
+  padding: 2px;
+  color: red;
+
+}
